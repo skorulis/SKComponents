@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SKComponents_Example' do
+  pod 'SKComponents', :path => '../'
+
+  target 'SKComponents_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
