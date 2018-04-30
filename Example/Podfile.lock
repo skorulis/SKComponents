@@ -1,0 +1,16 @@
+PODS:
+  - SKComponents (0.1.0)
+
+DEPENDENCIES:
+  - SKComponents (from `../`)
+
+EXTERNAL SOURCES:
+  SKComponents:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SKComponents: 6e9b9f396c378d8cdc9a8217bb2ac027979e0fce
+
+PODFILE CHECKSUM: 183210ebe05ea376a4600ef547f824f41c221bcb
+
+COCOAPODS: 1.5.0
