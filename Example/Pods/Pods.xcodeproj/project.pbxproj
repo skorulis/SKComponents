@@ -10,7 +10,6 @@
 		02466B80ECDE1F0A1CF2E5609FEAAC93 /* Pods-SKComponents_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 72388F77ADA46B85CC0C9520A6314B16 /* Pods-SKComponents_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		060A22A638111554EEFB6D5F16073F93 /* SKComponents-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D99018DCE1F9CDBFD5517C732DA0347 /* SKComponents-dummy.m */; };
 		073C03FD3CF6AD5FACDF5BD119A3AC35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		0AECB7C01F6CDED92FD05B9BCEF47DEB /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A525A36426F357A6B97D8960C976888F /* ReplaceMe.swift */; };
 		436CCD99C7E12F12C4FD7A83DE95273D /* SKComponents-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 93914BB96B7FF16B0651CEC662425FDE /* SKComponents-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6EFC65381B009BB1B81B701C9F44E9F0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		6FDB6F28225187A7F31D37FD15C86693 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
@@ -18,6 +17,7 @@
 		8FF72F60E40A29F5B31C7D8F9A1BA871 /* Pods-SKComponents_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C864B92C655D9BD5B8A8C2A9F32B55F /* Pods-SKComponents_Tests-dummy.m */; };
 		D4A0A94B4C307A2FF4F3E2FFF7F9BE2B /* Pods-SKComponents_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C7718BFE0A62BDB705E9331B6E0D2B92 /* Pods-SKComponents_Example-dummy.m */; };
 		FA31E4E22097C244002E14CC /* SKTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31E4E12097C244002E14CC /* SKTextField.swift */; };
+		FAA4A1F0209890C9009CE77C /* SKTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA4A1EF209890C9009CE77C /* SKTheme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +58,6 @@
 		94A6E916E950BCC1B7D692D5B7B5A8FF /* Pods-SKComponents_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SKComponents_Example.modulemap"; sourceTree = "<group>"; };
 		958467E5650A2DC6D55D103D0C13B45F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		9FA7D59EA2843FA7ED08519A12445CBC /* Pods-SKComponents_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SKComponents_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		A525A36426F357A6B97D8960C976888F /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = SKComponents/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
 		A68426B7E713E090A73255CFDA8E8065 /* Pods-SKComponents_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SKComponents_Tests.modulemap"; sourceTree = "<group>"; };
 		AAC1D2BC43A209FF67135E55BB4B1E67 /* Pods-SKComponents_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SKComponents_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		B903AFF457BA96C6D399DE6C1A5EC4DA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -73,6 +72,7 @@
 		EE76A71B1175324A34A5229DA37DB2C1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		F0A00FEF1EC47586C9E085D802F9A792 /* Pods_SKComponents_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SKComponents_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA31E4E12097C244002E14CC /* SKTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SKTextField.swift; path = SKComponents/Classes/SKTextField.swift; sourceTree = "<group>"; };
+		FAA4A1EF209890C9009CE77C /* SKTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SKTheme.swift; path = SKComponents/Classes/SKTheme.swift; sourceTree = "<group>"; };
 		FF55489B8B3FCB8EAF10BEA71C6224E2 /* Pods-SKComponents_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SKComponents_Tests-resources.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,8 +139,8 @@
 		1CE0724059343FB661DEB524F4365E80 /* SKComponents */ = {
 			isa = PBXGroup;
 			children = (
+				FAA4A1EF209890C9009CE77C /* SKTheme.swift */,
 				FA31E4E12097C244002E14CC /* SKTextField.swift */,
-				A525A36426F357A6B97D8960C976888F /* ReplaceMe.swift */,
 				DCEDA7F34D6A945021E4B46EE59B145B /* Pod */,
 				0041E8147788408A3D53D2699C4CCFF6 /* Support Files */,
 			);
@@ -354,7 +354,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AECB7C01F6CDED92FD05B9BCEF47DEB /* ReplaceMe.swift in Sources */,
+				FAA4A1F0209890C9009CE77C /* SKTheme.swift in Sources */,
 				060A22A638111554EEFB6D5F16073F93 /* SKComponents-dummy.m in Sources */,
 				FA31E4E22097C244002E14CC /* SKTextField.swift in Sources */,
 			);
