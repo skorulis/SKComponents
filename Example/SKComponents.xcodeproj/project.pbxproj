@@ -15,8 +15,8 @@
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		EC7F304DE232E81F2039E985 /* Pods_SKComponents_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E57D4F66DB15A3FF08D6E4C5 /* Pods_SKComponents_Example.framework */; };
 		FA31E4E42097C2BF002E14CC /* ComponentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31E4E32097C2BF002E14CC /* ComponentListViewController.swift */; };
-		FA31E4E72097C2F3002E14CC /* TextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31E4E52097C2F3002E14CC /* TextFieldViewController.swift */; };
-		FA31E4E82097C2F3002E14CC /* TextFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA31E4E62097C2F3002E14CC /* TextFieldViewController.xib */; };
+		FACE5A242099141D00535EFF /* TextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACE5A222099141D00535EFF /* TextFieldViewController.swift */; };
+		FACE5A252099141D00535EFF /* TextFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FACE5A232099141D00535EFF /* TextFieldViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,8 +49,8 @@
 		E57D4F66DB15A3FF08D6E4C5 /* Pods_SKComponents_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SKComponents_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F338AC6313E63F1A67D659E5 /* Pods-SKComponents_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKComponents_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKComponents_Example/Pods-SKComponents_Example.release.xcconfig"; sourceTree = "<group>"; };
 		FA31E4E32097C2BF002E14CC /* ComponentListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentListViewController.swift; sourceTree = "<group>"; };
-		FA31E4E52097C2F3002E14CC /* TextFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldViewController.swift; sourceTree = "<group>"; };
-		FA31E4E62097C2F3002E14CC /* TextFieldViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldViewController.xib; sourceTree = "<group>"; };
+		FACE5A222099141D00535EFF /* TextFieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldViewController.swift; sourceTree = "<group>"; };
+		FACE5A232099141D00535EFF /* TextFieldViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFieldViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,14 +106,13 @@
 		607FACD21AFB9204008FA782 /* Example for SKComponents */ = {
 			isa = PBXGroup;
 			children = (
+				FACE5A212099141D00535EFF /* controllers */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 				FA31E4E32097C2BF002E14CC /* ComponentListViewController.swift */,
-				FA31E4E52097C2F3002E14CC /* TextFieldViewController.swift */,
-				FA31E4E62097C2F3002E14CC /* TextFieldViewController.xib */,
 			);
 			name = "Example for SKComponents";
 			path = SKComponents;
@@ -163,6 +162,15 @@
 				B32FAAEEBDE1CB6A9ACD4B32 /* Pods-SKComponents_Tests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		FACE5A212099141D00535EFF /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FACE5A222099141D00535EFF /* TextFieldViewController.swift */,
+				FACE5A232099141D00535EFF /* TextFieldViewController.xib */,
+			);
+			path = controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,10 +260,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA31E4E82097C2F3002E14CC /* TextFieldViewController.xib in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				FACE5A252099141D00535EFF /* TextFieldViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,7 +338,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA31E4E72097C2F3002E14CC /* TextFieldViewController.swift in Sources */,
+				FACE5A242099141D00535EFF /* TextFieldViewController.swift in Sources */,
 				FA31E4E42097C2BF002E14CC /* ComponentListViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
