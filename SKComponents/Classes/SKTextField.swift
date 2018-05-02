@@ -15,6 +15,8 @@ public class SKTextField: UITextField {
         }
     }
     
+    public var errorState:Bool = false
+    
     public required init?(coder aDecoder: NSCoder) {
         placeholderColor = UIColor.white
         super.init(coder: aDecoder)
@@ -23,10 +25,13 @@ public class SKTextField: UITextField {
     
     private func commonInit() {
         self.borderStyle = .none
-        self.backgroundColor = SKTheme.theme.color.peterRiver
         self.font = SKTheme.theme.font.textfieldFont
-        self.textColor = SKTheme.theme.color.clouds
-        self.placeholderColor = SKTheme.theme.color.silver
+        self.textColor = SKTheme.theme.color.midnightBlue
+        self.placeholderColor = self.textColor!.withAlphaComponent(0.6)
+        self.layer.cornerRadius = 4
+        self.layer.borderWidth = 3
+        self.layer.borderColor = SKTheme.theme.color.peterRiver.cgColor
+        self.backgroundColor = SKTheme.theme.color.peterRiver.withAlphaComponent(0.25)
     }
     
     public override var placeholder: String? {

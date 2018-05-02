@@ -18,10 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         //Experiment lightening colours
-        for x in SKTheme.theme.color.allColors() {
+        /*for x in SKTheme.theme.color.allColors() {
             let c = SKTheme.theme.color[keyPath:x.1]
             SKTheme.theme.color[keyPath:x.1] = c.lighterColor(removeSaturation: 0.25)
-        }
+        }*/
         
         return true
     }
