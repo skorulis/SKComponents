@@ -7,11 +7,16 @@
 //
 
 import UIKit
+import SKComponents
 
 class TextFieldViewController: UIViewController {
 
+    @IBOutlet var textField:SKTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //textField.placeholder = "TEST PLACEHOLDER"
     }
 
 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SKComponents
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        //Experiment lightening colours
+        for x in SKTheme.theme.color.allColors() {
+            let c = SKTheme.theme.color[keyPath:x.1]
+            SKTheme.theme.color[keyPath:x.1] = c.lighterColor(removeSaturation: 0.25)
+        }
+        
         return true
     }
 

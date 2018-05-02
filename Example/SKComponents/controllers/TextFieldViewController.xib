@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TextFieldViewController" customModule="SKComponents_Example" customModuleProvider="target">
             <connections>
+                <outlet property="textField" destination="Ewk-QO-kpw" id="VpW-zj-8cv"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,7 +21,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Placeholder" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ewk-QO-kpw" customClass="SKTextField" customModule="SKComponents">
-                    <rect key="frame" x="20" y="40" width="335" height="30"/>
+                    <rect key="frame" x="0.0" y="40" width="375" height="30"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
@@ -29,8 +30,8 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="Ewk-QO-kpw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="6B2-V8-jlD"/>
-                <constraint firstItem="Ewk-QO-kpw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Fd0-Ae-m6x"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ewk-QO-kpw" secondAttribute="trailing" constant="20" id="YtT-lV-qPW"/>
+                <constraint firstItem="Ewk-QO-kpw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Fd0-Ae-m6x"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ewk-QO-kpw" secondAttribute="trailing" id="YtT-lV-qPW"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>

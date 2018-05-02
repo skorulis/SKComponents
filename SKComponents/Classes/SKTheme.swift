@@ -23,6 +23,16 @@ extension UIColor {
             blue: rgb & 0xFF
         )
     }
+    
+    public func lighterColor(removeSaturation val: CGFloat) -> UIColor {
+        var h: CGFloat = 0, s: CGFloat = 0
+        var b: CGFloat = 0, a: CGFloat = 0
+        
+        guard getHue(&h, saturation: &s, brightness: &b, alpha: &a)
+            else {return self}
+        
+        return UIColor(hue: h, saturation: max(s - val, 0.0), brightness: b, alpha: a)
+    }
 }
 
 
@@ -81,7 +91,9 @@ open class SKThemeColors {
     
 }
 
-open class SKFonts {
+open class SKThemeFonts {
+    
+    var textfieldFont = UIFont.systemFont(ofSize: 18)
     
 }
 
@@ -89,6 +101,6 @@ open class SKTheme: NSObject {
     public static var theme = SKTheme()
     
     public var color = SKThemeColors()
-    public var font = SKFonts()
+    public var font = SKThemeFonts()
     
 }
