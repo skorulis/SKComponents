@@ -20,9 +20,13 @@ class ComponentListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        components.append(ComponentExample(title: "Colors", createBlock: { () -> (UIViewController) in
+            return ColorListController(nibName: nil, bundle: nil)
+        }));
         components.append(ComponentExample(title: "TextFields", createBlock: { () -> (UIViewController) in
             return TextFieldViewController(nibName: nil, bundle: nil)
         }));
+        
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
 

@@ -17,6 +17,7 @@
 		FA31E4E42097C2BF002E14CC /* ComponentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31E4E32097C2BF002E14CC /* ComponentListViewController.swift */; };
 		FACE5A242099141D00535EFF /* TextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACE5A222099141D00535EFF /* TextFieldViewController.swift */; };
 		FACE5A252099141D00535EFF /* TextFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FACE5A232099141D00535EFF /* TextFieldViewController.xib */; };
+		FACE5A272099163900535EFF /* ColorListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACE5A262099163900535EFF /* ColorListController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		FA31E4E32097C2BF002E14CC /* ComponentListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentListViewController.swift; sourceTree = "<group>"; };
 		FACE5A222099141D00535EFF /* TextFieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldViewController.swift; sourceTree = "<group>"; };
 		FACE5A232099141D00535EFF /* TextFieldViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFieldViewController.xib; sourceTree = "<group>"; };
+		FACE5A262099163900535EFF /* ColorListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorListController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 			children = (
 				FACE5A222099141D00535EFF /* TextFieldViewController.swift */,
 				FACE5A232099141D00535EFF /* TextFieldViewController.xib */,
+				FACE5A262099163900535EFF /* ColorListController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				FACE5A242099141D00535EFF /* TextFieldViewController.swift in Sources */,
 				FA31E4E42097C2BF002E14CC /* ComponentListViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				FACE5A272099163900535EFF /* ColorListController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
