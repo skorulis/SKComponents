@@ -26,6 +26,9 @@ class ComponentListViewController: UITableViewController {
         components.append(ComponentExample(title: "TextFields", createBlock: { () -> (UIViewController) in
             return TextFieldViewController(nibName: nil, bundle: nil)
         }));
+        components.append(ComponentExample(title: "Buttons", createBlock: { () -> (UIViewController) in
+            return ButtonsViewController(nibName: nil, bundle: nil)
+        }));
         
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }

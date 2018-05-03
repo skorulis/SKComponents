@@ -19,7 +19,7 @@ public class SKTextField: UITextField {
     
     public var errorState:Bool = false {
         didSet {
-            updateBackgroundColor()
+            updateBackgroundColor(animate:true)
         }
     }
     
@@ -37,7 +37,7 @@ public class SKTextField: UITextField {
         self.layer.cornerRadius = 4
         self.layer.borderWidth = 3
         dynamicBackground.addToView(view: self)
-        updateBackgroundColor()
+        updateBackgroundColor(animate:false)
     }
     
     public override var placeholder: String? {
@@ -54,7 +54,7 @@ public class SKTextField: UITextField {
         }
     }
     
-    private func updateBackgroundColor() {
+    private func updateBackgroundColor(animate:Bool) {
         var color = SKTheme.theme.color.peterRiver
         if self.errorState {
             color = SKTheme.theme.color.pomegranate
@@ -64,20 +64,25 @@ public class SKTextField: UITextField {
             }
         }
         self.layer.borderColor = color.cgColor
-        self.dynamicBackground.backgroundColor = color.withAlphaComponent(0.25)
+        if (animate) {
+            self.dynamicBackground.animateBackground(color: color.withAlphaComponent(0.25))
+        } else {
+            self.dynamicBackground.backgroundColor = color.withAlphaComponent(0.25)
+        }
+        
     }
     
     //MARK: Events
     
     override public func becomeFirstResponder() -> Bool {
         let result = super.becomeFirstResponder()
-        self.updateBackgroundColor()
+        self.updateBackgroundColor(animate:true)
         return result
     }
     
     override public func resignFirstResponder() -> Bool {
         let result = super.resignFirstResponder()
-        self.updateBackgroundColor()
+        self.updateBackgroundColor(animate:true)
         return result
     }
     
