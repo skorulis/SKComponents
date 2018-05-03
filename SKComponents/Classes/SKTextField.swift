@@ -9,13 +9,19 @@ import UIKit
 
 public class SKTextField: UITextField {
     
+    private let dynamicBackground = DynamicColorBackgroundView()
+    
     public var placeholderColor:UIColor {
         didSet {
             self.placeholder = super.placeholder
         }
     }
     
-    public var errorState:Bool = false
+    public var errorState:Bool = false {
+        didSet {
+            updateBackgroundColor()
+        }
+    }
     
     public required init?(coder aDecoder: NSCoder) {
         placeholderColor = UIColor.white
@@ -30,8 +36,8 @@ public class SKTextField: UITextField {
         self.placeholderColor = self.textColor!.withAlphaComponent(0.6)
         self.layer.cornerRadius = 4
         self.layer.borderWidth = 3
-        self.layer.borderColor = SKTheme.theme.color.peterRiver.cgColor
-        self.backgroundColor = SKTheme.theme.color.peterRiver.withAlphaComponent(0.25)
+        dynamicBackground.addToView(view: self)
+        updateBackgroundColor()
     }
     
     public override var placeholder: String? {
@@ -47,6 +53,35 @@ public class SKTextField: UITextField {
             }
         }
     }
+    
+    private func updateBackgroundColor() {
+        var color = SKTheme.theme.color.peterRiver
+        if self.errorState {
+            color = SKTheme.theme.color.pomegranate
+        } else {
+            if (self.isFirstResponder) {
+                color = SKTheme.theme.color.amethyst
+            }
+        }
+        self.layer.borderColor = color.cgColor
+        self.dynamicBackground.backgroundColor = color.withAlphaComponent(0.25)
+    }
+    
+    //MARK: Events
+    
+    override public func becomeFirstResponder() -> Bool {
+        let result = super.becomeFirstResponder()
+        self.updateBackgroundColor()
+        return result
+    }
+    
+    override public func resignFirstResponder() -> Bool {
+        let result = super.resignFirstResponder()
+        self.updateBackgroundColor()
+        return result
+    }
+    
+    //MARK: UITextfield overrides
     
     public override var intrinsicContentSize: CGSize {
         var size = super.intrinsicContentSize
