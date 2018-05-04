@@ -33,6 +33,28 @@ extension UIColor {
         
         return UIColor(hue: h, saturation: max(s - val, 0.0), brightness: b, alpha: a)
     }
+    
+    public func mix(color:UIColor,amount:CGFloat) -> UIColor {
+        var r1: CGFloat = 0
+        var g1: CGFloat = 0
+        var b1: CGFloat = 0
+        var a1: CGFloat = 0
+        
+        var r2: CGFloat = 0
+        var g2: CGFloat = 0
+        var b2: CGFloat = 0
+        var a2: CGFloat = 0
+        
+        self.getRed(&r1, green: &g1, blue: &b1, alpha: &a1)
+        color.getRed(&r2, green: &g2, blue: &b2, alpha: &a2)
+        
+        let r = r1 * (1-amount) + r2 * amount
+        let g = g1 * (1-amount) + g2 * amount
+        let b = b1 * (1-amount) + b2 * amount
+        let a = a1 * (1-amount) + a2 * amount
+        
+        return UIColor(red: r, green: g, blue: b, alpha: a)
+    }
 }
 
 

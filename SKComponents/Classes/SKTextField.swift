@@ -64,10 +64,11 @@ public class SKTextField: UITextField {
             }
         }
         self.layer.borderColor = color.cgColor
+        let bgColor = color.mix(color: UIColor.white, amount: 0.75)
         if (animate) {
-            self.dynamicBackground.animateBackground(color: color.withAlphaComponent(0.25))
+            self.dynamicBackground.animateBackground(color: bgColor)
         } else {
-            self.dynamicBackground.backgroundColor = color.withAlphaComponent(0.25)
+            self.dynamicBackground.backgroundColor = bgColor
         }
         
     }
@@ -82,7 +83,7 @@ public class SKTextField: UITextField {
     
     override public func resignFirstResponder() -> Bool {
         let result = super.resignFirstResponder()
-        self.updateBackgroundColor(animate:true)
+        self.updateBackgroundColor(animate:false)
         return result
     }
     
