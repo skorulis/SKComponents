@@ -7,20 +7,20 @@
 
 import UIKit
 
-enum BackgroundShapeType {
+public enum BackgroundShapeType {
     case none
     case arrow
 }
 
-class DynamicColorBackgroundView: UIView, CAAnimationDelegate {
+public class DynamicColorBackgroundView: UIView, CAAnimationDelegate {
     
-    var backgroundShape:BackgroundShapeType = .none
+    public var backgroundShape:BackgroundShapeType = .none
     
     private let mainClippingLayer = CAShapeLayer()
     private var animationLayer = CALayer()
     private var animationColor:UIColor = UIColor.white
     
-    override class var layerClass:AnyClass {
+    override public class var layerClass:AnyClass {
         return CALayer.self
     }
     
@@ -29,7 +29,7 @@ class DynamicColorBackgroundView: UIView, CAAnimationDelegate {
         commonInit()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()
     }
@@ -44,7 +44,7 @@ class DynamicColorBackgroundView: UIView, CAAnimationDelegate {
         self.autoresizingMask =  [.flexibleWidth, .flexibleHeight]
     }
     
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
         self.animationLayer.frame = self.bounds
         
@@ -76,7 +76,7 @@ class DynamicColorBackgroundView: UIView, CAAnimationDelegate {
         self.mainClippingLayer.fillColor = UIColor.black.cgColor
     }
     
-    override var backgroundColor: UIColor? {
+    override public var backgroundColor: UIColor? {
         set {
             self.layer.backgroundColor = newValue?.cgColor
         }
@@ -88,7 +88,7 @@ class DynamicColorBackgroundView: UIView, CAAnimationDelegate {
         }
     }
     
-    func animateBackground(color:UIColor) {
+    public func animateBackground(color:UIColor) {
         self.animationColor = color
         self.animationLayer.backgroundColor = color.cgColor
         self.layer.addSublayer(self.animationLayer)
@@ -114,7 +114,7 @@ class DynamicColorBackgroundView: UIView, CAAnimationDelegate {
     
     //MARK: CAAnimationDelegate
     
-    func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
+    public func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
         self.layer.backgroundColor = self.animationColor.cgColor
         self.animationLayer.removeFromSuperlayer()
         self.animationLayer.mask = nil
