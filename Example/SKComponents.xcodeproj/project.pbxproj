@@ -14,6 +14,8 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		EC7F304DE232E81F2039E985 /* Pods_SKComponents_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E57D4F66DB15A3FF08D6E4C5 /* Pods_SKComponents_Example.framework */; };
+		FA1C1E8120A8E585004A274F /* BendingBackgroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1C1E7F20A8E585004A274F /* BendingBackgroundViewController.swift */; };
+		FA1C1E8220A8E585004A274F /* BendingBackgroundViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA1C1E8020A8E585004A274F /* BendingBackgroundViewController.xib */; };
 		FA31E4E42097C2BF002E14CC /* ComponentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31E4E32097C2BF002E14CC /* ComponentListViewController.swift */; };
 		FAC3277A209BB3580099394A /* ButtonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC32778209BB3580099394A /* ButtonsViewController.swift */; };
 		FAC3277B209BB3580099394A /* ButtonsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAC32779209BB3580099394A /* ButtonsViewController.xib */; };
@@ -51,6 +53,8 @@
 		B32FAAEEBDE1CB6A9ACD4B32 /* Pods-SKComponents_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKComponents_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKComponents_Tests/Pods-SKComponents_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		E57D4F66DB15A3FF08D6E4C5 /* Pods_SKComponents_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SKComponents_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F338AC6313E63F1A67D659E5 /* Pods-SKComponents_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKComponents_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKComponents_Example/Pods-SKComponents_Example.release.xcconfig"; sourceTree = "<group>"; };
+		FA1C1E7F20A8E585004A274F /* BendingBackgroundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BendingBackgroundViewController.swift; sourceTree = "<group>"; };
+		FA1C1E8020A8E585004A274F /* BendingBackgroundViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BendingBackgroundViewController.xib; sourceTree = "<group>"; };
 		FA31E4E32097C2BF002E14CC /* ComponentListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentListViewController.swift; sourceTree = "<group>"; };
 		FAC32778209BB3580099394A /* ButtonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsViewController.swift; sourceTree = "<group>"; };
 		FAC32779209BB3580099394A /* ButtonsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonsViewController.xib; sourceTree = "<group>"; };
@@ -178,6 +182,8 @@
 				FACE5A262099163900535EFF /* ColorListController.swift */,
 				FAC32778209BB3580099394A /* ButtonsViewController.swift */,
 				FAC32779209BB3580099394A /* ButtonsViewController.xib */,
+				FA1C1E7F20A8E585004A274F /* BendingBackgroundViewController.swift */,
+				FA1C1E8020A8E585004A274F /* BendingBackgroundViewController.xib */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -269,6 +275,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA1C1E8220A8E585004A274F /* BendingBackgroundViewController.xib in Resources */,
 				FAC3277B209BB3580099394A /* ButtonsViewController.xib in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
@@ -348,6 +355,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA1C1E8120A8E585004A274F /* BendingBackgroundViewController.swift in Sources */,
 				FACE5A242099141D00535EFF /* TextFieldViewController.swift in Sources */,
 				FA31E4E42097C2BF002E14CC /* ComponentListViewController.swift in Sources */,
 				FAC3277A209BB3580099394A /* ButtonsViewController.swift in Sources */,

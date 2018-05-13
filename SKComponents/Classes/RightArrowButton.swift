@@ -25,7 +25,7 @@ public class RightArrowButton: UIButton {
     
     override public var intrinsicContentSize: CGSize {
         var size = super.intrinsicContentSize
-        size.height = max(size.height, 40)
+        size.height = max(size.height, 50)
         return size
     }
     

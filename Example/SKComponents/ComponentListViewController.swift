@@ -30,6 +30,10 @@ class ComponentListViewController: UITableViewController {
             return ButtonsViewController(nibName: nil, bundle: nil)
         }));
         
+        components.append(ComponentExample(title: "Bending Backgrounds", createBlock: { () -> (UIViewController) in
+            return BendingBackgroundViewController()
+        }));
+        
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
 
