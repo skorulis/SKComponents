@@ -50,7 +50,8 @@ class ColorListCollectionViewController: UICollectionViewController {
     
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
         self.layout.didScroll(point: scrollView.contentOffset)
-        self.collectionView?.reloadData()
+        self.layout.invalidateLayout()
+        self.collectionView?.visibleCells.forEach { ($0 as! ColorListCell).bendingBackground.bendAmount = layout.bendAmount}
     }
     
 }
