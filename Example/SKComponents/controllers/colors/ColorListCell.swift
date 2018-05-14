@@ -32,4 +32,11 @@ class ColorListCell: UICollectionViewCell {
         self.backgroundView = bendingBackground
     }
     
+    override func apply(_ layoutAttributes: UICollectionViewLayoutAttributes) {
+        super.apply(layoutAttributes)
+        if let atts = layoutAttributes as? BendingLayoutAttributes {
+            //bendingBackground.bendAmount = atts.bendAmount
+        }
+    }
+    
 }

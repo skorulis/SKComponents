@@ -11,7 +11,7 @@ import SKComponents
 
 class ColorListCollectionViewController: UICollectionViewController {
 
-    private let layout = UICollectionViewFlowLayout()
+    private let layout = BendingFlowLayout()
     var colorPaths:[(String,ReferenceWritableKeyPath<SKThemeColors, UIColor>)] = []
     
     public init() {
@@ -44,7 +44,13 @@ class ColorListCollectionViewController: UICollectionViewController {
         let color = colorPaths[indexPath.row]
         cell.bendingBackground.backgroundColor = SKTheme.theme.color[keyPath:color.1]
         cell.label.text = color.0
+        cell.bendingBackground.bendAmount = layout.bendAmount
         return cell
+    }
+    
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        self.layout.didScroll(point: scrollView.contentOffset)
+        self.collectionView?.reloadData()
     }
     
 }
