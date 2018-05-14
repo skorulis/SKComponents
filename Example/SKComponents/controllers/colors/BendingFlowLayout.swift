@@ -10,7 +10,7 @@ import UIKit
 
 class BendingFlowLayout: UICollectionViewFlowLayout {
 
-    private let maxVelocity:Double = 500
+    private let maxVelocity:Double = 800
     
     var lastScroll:TimeInterval = 0
     var lastPoint:CGPoint = .zero
@@ -26,7 +26,7 @@ class BendingFlowLayout: UICollectionViewFlowLayout {
             vel = maxVelocity * copysign(-1, vel)
         }
         let cal = CGFloat(vel/maxVelocity) * -1
-        bendAmount = bendAmount * 0.1 + cal * 0.9
+        bendAmount = bendAmount * 0.4 + cal * 0.6
         
         //print("diff \(diff)")
         //print(bendAmount)

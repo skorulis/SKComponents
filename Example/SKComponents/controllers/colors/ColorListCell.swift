@@ -12,7 +12,8 @@ import SKComponents
 class ColorListCell: UICollectionViewCell {
 
     let label = UILabel()
-    let bendingBackground = BendingBackgroundView()
+    private let bendingBackground = BendingBackgroundView()
+    private var baseBackgroundColor:UIColor? = UIColor.brown
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -28,8 +29,46 @@ class ColorListCell: UICollectionViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         label.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20).isActive = true
-        bendingBackground.bendAmount = 1
         self.backgroundView = bendingBackground
+    }
+    
+    func updateColour() {
+        if (isSelected || isHighlighted) {
+            bendingBackground.backgroundColor = self.backgroundColor?.lighterColor(removeSaturation: 0.5)
+        } else {
+            bendingBackground.backgroundColor = self.backgroundColor
+        }
+    }
+    
+    var bendAmount: CGFloat {
+        set {
+            bendingBackground.bendAmount = newValue
+        }
+        get {
+            return bendingBackground.bendAmount
+        }
+    }
+    
+    override var backgroundColor: UIColor? {
+        set {
+            baseBackgroundColor = newValue
+            updateColour()
+        }
+        get {
+            return baseBackgroundColor
+        }
+    }
+    
+    override var isSelected: Bool {
+        didSet {
+            updateColour()
+        }
+    }
+    
+    override var isHighlighted: Bool {
+        didSet {
+            updateColour()
+        }
     }
     
 }

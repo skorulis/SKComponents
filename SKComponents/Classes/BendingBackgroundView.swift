@@ -39,11 +39,11 @@ public class BendingBackgroundView: UIView {
         path.addQuadCurve(to: CGPoint(x: 0, y: height), controlPoint: CGPoint(x: width/2, y: height+movement))
         path.close()
         
-        self.layer.shadowColor = UIColor.black.cgColor
+        /*self.layer.shadowColor = UIColor.black.cgColor
         self.layer.shadowOffset = CGSize(width: 0, height: -1)
         self.layer.shadowRadius = 3
         self.layer.shadowOpacity = 1
-        self.layer.shadowPath = path.cgPath //Shadow on top line
+        self.layer.shadowPath = path.cgPath //Shadow on top line*/
         
         self.shapeLayer.path = path.cgPath
         
@@ -54,7 +54,7 @@ public class BendingBackgroundView: UIView {
         if self.shadowLayer.superlayer == nil {
             self.layer.addSublayer(self.shadowLayer)
         }
-        self.shadowLayer.frame = self.bounds
+        //self.shadowLayer.frame = self.bounds
         updatePath()
     }
     

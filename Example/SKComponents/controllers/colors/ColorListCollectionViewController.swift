@@ -42,16 +42,16 @@ class ColorListCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ColorListCell
         let color = colorPaths[indexPath.row]
-        cell.bendingBackground.backgroundColor = SKTheme.theme.color[keyPath:color.1]
+        cell.backgroundColor = SKTheme.theme.color[keyPath:color.1]
         cell.label.text = color.0
-        cell.bendingBackground.bendAmount = layout.bendAmount
+        cell.bendAmount = layout.bendAmount
         return cell
     }
     
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
         self.layout.didScroll(point: scrollView.contentOffset)
         self.layout.invalidateLayout()
-        self.collectionView?.visibleCells.forEach { ($0 as! ColorListCell).bendingBackground.bendAmount = layout.bendAmount}
+        self.collectionView?.visibleCells.forEach { ($0 as! ColorListCell).bendAmount = layout.bendAmount}
     }
     
 }
