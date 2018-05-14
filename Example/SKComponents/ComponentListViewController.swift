@@ -21,7 +21,7 @@ class ComponentListViewController: UITableViewController {
         super.viewDidLoad()
 
         components.append(ComponentExample(title: "Colors", createBlock: { () -> (UIViewController) in
-            return ColorListController(nibName: nil, bundle: nil)
+            return ColorListCollectionViewController()
         }));
         components.append(ComponentExample(title: "TextFields", createBlock: { () -> (UIViewController) in
             return TextFieldViewController(nibName: nil, bundle: nil)
