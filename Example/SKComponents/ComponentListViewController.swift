@@ -34,6 +34,10 @@ class ComponentListViewController: UITableViewController {
             return BendingBackgroundViewController()
         }));
         
+        components.append(ComponentExample(title: "Box Transition", createBlock: { () -> (UIViewController) in
+            return BoxTransitionViewController()
+        }));
+        
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
 

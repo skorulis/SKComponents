@@ -21,6 +21,7 @@
 		FA3A4563209A620200C2C647 /* KeyboardPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A4562209A620200C2C647 /* KeyboardPlaceholder.swift */; };
 		FA3A45AC209AED4000C2C647 /* RightArrowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A45AB209AED4000C2C647 /* RightArrowButton.swift */; };
 		FA3A45AE209AF02D00C2C647 /* DynamicColorBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A45AD209AF02D00C2C647 /* DynamicColorBackgroundView.swift */; };
+		FA87B6C920AA3980004BF93F /* BoxRotationTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87B6C820AA3980004BF93F /* BoxRotationTransition.swift */; };
 		FAA4A1F0209890C9009CE77C /* SKTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA4A1EF209890C9009CE77C /* SKTheme.swift */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +81,7 @@
 		FA3A4562209A620200C2C647 /* KeyboardPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = KeyboardPlaceholder.swift; path = SKComponents/Classes/KeyboardPlaceholder.swift; sourceTree = "<group>"; };
 		FA3A45AB209AED4000C2C647 /* RightArrowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RightArrowButton.swift; path = SKComponents/Classes/RightArrowButton.swift; sourceTree = "<group>"; };
 		FA3A45AD209AF02D00C2C647 /* DynamicColorBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DynamicColorBackgroundView.swift; path = SKComponents/Classes/DynamicColorBackgroundView.swift; sourceTree = "<group>"; };
+		FA87B6C820AA3980004BF93F /* BoxRotationTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BoxRotationTransition.swift; path = SKComponents/Classes/BoxRotationTransition.swift; sourceTree = "<group>"; };
 		FAA4A1EF209890C9009CE77C /* SKTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SKTheme.swift; path = SKComponents/Classes/SKTheme.swift; sourceTree = "<group>"; };
 		FF55489B8B3FCB8EAF10BEA71C6224E2 /* Pods-SKComponents_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SKComponents_Tests-resources.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -147,6 +149,7 @@
 		1CE0724059343FB661DEB524F4365E80 /* SKComponents */ = {
 			isa = PBXGroup;
 			children = (
+				FA87B6C820AA3980004BF93F /* BoxRotationTransition.swift */,
 				FA3A45AD209AF02D00C2C647 /* DynamicColorBackgroundView.swift */,
 				FA1C1E8320A8E5FE004A274F /* BendingBackgroundView.swift */,
 				FA3A45AB209AED4000C2C647 /* RightArrowButton.swift */,
@@ -368,6 +371,7 @@
 			files = (
 				FA3A4563209A620200C2C647 /* KeyboardPlaceholder.swift in Sources */,
 				FAA4A1F0209890C9009CE77C /* SKTheme.swift in Sources */,
+				FA87B6C920AA3980004BF93F /* BoxRotationTransition.swift in Sources */,
 				FA3A45AE209AF02D00C2C647 /* DynamicColorBackgroundView.swift in Sources */,
 				060A22A638111554EEFB6D5F16073F93 /* SKComponents-dummy.m in Sources */,
 				FA1C1E8420A8E5FE004A274F /* BendingBackgroundView.swift in Sources */,

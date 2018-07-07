@@ -17,7 +17,7 @@ class BendingBackgroundViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        example.backgroundColor = SKTheme.theme.color.sunflower
+        example.backgroundColor = SKTheme().color.sunflower
     }
     
     @IBAction func sliderChanged(slider:UISlider) {

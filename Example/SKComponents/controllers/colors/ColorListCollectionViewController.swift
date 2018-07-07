@@ -12,6 +12,7 @@ import SKComponents
 class ColorListCollectionViewController: UICollectionViewController {
 
     private let layout = BendingFlowLayout()
+    private let theme = SKTheme()
     var colorPaths:[(String,ReferenceWritableKeyPath<SKThemeColors, UIColor>)] = []
     
     public init() {
@@ -26,7 +27,7 @@ class ColorListCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
         self.collectionView?.register(ColorListCell.self, forCellWithReuseIdentifier: "cell")
         self.collectionView?.backgroundColor = UIColor.white
-        colorPaths = SKTheme.theme.color.allColors()
+        colorPaths = theme.color.allColors()
     }
 
     override func viewDidLayoutSubviews() {
@@ -42,7 +43,7 @@ class ColorListCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ColorListCell
         let color = colorPaths[indexPath.row]
-        cell.backgroundColor = SKTheme.theme.color[keyPath:color.1]
+        cell.backgroundColor = theme.color[keyPath:color.1]
         cell.label.text = color.0
         cell.bendAmount = layout.bendAmount
         return cell

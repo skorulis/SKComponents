@@ -12,11 +12,12 @@ import SKComponents
 class ColorListController: UITableViewController {
 
     var colorPaths:[(String,ReferenceWritableKeyPath<SKThemeColors, UIColor>)] = []
+    let theme = SKTheme()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        colorPaths = SKTheme.theme.color.allColors()
+        colorPaths = theme.color.allColors()
         
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         self.tableView.rowHeight = 60
@@ -32,7 +33,7 @@ class ColorListController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let color = colorPaths[indexPath.row]
-        cell.backgroundColor = SKTheme.theme.color[keyPath:color.1]
+        cell.backgroundColor = theme.color[keyPath:color.1]
         cell.textLabel?.text = color.0
         return cell
     }

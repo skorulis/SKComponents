@@ -20,6 +20,8 @@
 		FA1C1EC820A96E65004A274F /* ColorListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1C1EC720A96E65004A274F /* ColorListCell.swift */; };
 		FA1C1ECC20A972BA004A274F /* BendingFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1C1ECB20A972BA004A274F /* BendingFlowLayout.swift */; };
 		FA31E4E42097C2BF002E14CC /* ComponentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31E4E32097C2BF002E14CC /* ComponentListViewController.swift */; };
+		FA87B6CD20AA39ED004BF93F /* BoxTransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87B6CB20AA39ED004BF93F /* BoxTransitionViewController.swift */; };
+		FA87B6CE20AA39ED004BF93F /* BoxTransitionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA87B6CC20AA39ED004BF93F /* BoxTransitionViewController.xib */; };
 		FAC3277A209BB3580099394A /* ButtonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC32778209BB3580099394A /* ButtonsViewController.swift */; };
 		FAC3277B209BB3580099394A /* ButtonsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAC32779209BB3580099394A /* ButtonsViewController.xib */; };
 		FACE5A242099141D00535EFF /* TextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACE5A222099141D00535EFF /* TextFieldViewController.swift */; };
@@ -62,6 +64,8 @@
 		FA1C1EC720A96E65004A274F /* ColorListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorListCell.swift; sourceTree = "<group>"; };
 		FA1C1ECB20A972BA004A274F /* BendingFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BendingFlowLayout.swift; sourceTree = "<group>"; };
 		FA31E4E32097C2BF002E14CC /* ComponentListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentListViewController.swift; sourceTree = "<group>"; };
+		FA87B6CB20AA39ED004BF93F /* BoxTransitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxTransitionViewController.swift; sourceTree = "<group>"; };
+		FA87B6CC20AA39ED004BF93F /* BoxTransitionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BoxTransitionViewController.xib; sourceTree = "<group>"; };
 		FAC32778209BB3580099394A /* ButtonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsViewController.swift; sourceTree = "<group>"; };
 		FAC32779209BB3580099394A /* ButtonsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonsViewController.xib; sourceTree = "<group>"; };
 		FACE5A222099141D00535EFF /* TextFieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldViewController.swift; sourceTree = "<group>"; };
@@ -190,9 +194,19 @@
 			path = colors;
 			sourceTree = "<group>";
 		};
+		FA87B6CA20AA39DE004BF93F /* transitions */ = {
+			isa = PBXGroup;
+			children = (
+				FA87B6CB20AA39ED004BF93F /* BoxTransitionViewController.swift */,
+				FA87B6CC20AA39ED004BF93F /* BoxTransitionViewController.xib */,
+			);
+			path = transitions;
+			sourceTree = "<group>";
+		};
 		FACE5A212099141D00535EFF /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FA87B6CA20AA39DE004BF93F /* transitions */,
 				FA1C1EC420A96D63004A274F /* colors */,
 				FACE5A222099141D00535EFF /* TextFieldViewController.swift */,
 				FACE5A232099141D00535EFF /* TextFieldViewController.xib */,
@@ -299,6 +313,7 @@
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 				FACE5A252099141D00535EFF /* TextFieldViewController.xib in Resources */,
+				FA87B6CE20AA39ED004BF93F /* BoxTransitionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +391,7 @@
 				FA1C1E8120A8E585004A274F /* BendingBackgroundViewController.swift in Sources */,
 				FA1C1EC820A96E65004A274F /* ColorListCell.swift in Sources */,
 				FA1C1ECC20A972BA004A274F /* BendingFlowLayout.swift in Sources */,
+				FA87B6CD20AA39ED004BF93F /* BoxTransitionViewController.swift in Sources */,
 				FACE5A242099141D00535EFF /* TextFieldViewController.swift in Sources */,
 				FA31E4E42097C2BF002E14CC /* ComponentListViewController.swift in Sources */,
 				FAC3277A209BB3580099394A /* ButtonsViewController.swift in Sources */,
