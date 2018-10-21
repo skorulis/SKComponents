@@ -46,7 +46,7 @@ public class SKTextField: UITextField {
         }
         set {
             if let v = newValue {
-                let att = NSAttributedString(string: v, attributes: [NSAttributedStringKey.foregroundColor:self.placeholderColor])
+                let att = NSAttributedString(string: v, attributes: [NSAttributedString.Key.foregroundColor:self.placeholderColor])
                 super.attributedPlaceholder = att
             } else {
                 super.placeholder = newValue

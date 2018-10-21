@@ -26,14 +26,14 @@ public class KeyboardPlaceholder: UIView {
         self.isUserInteractionEnabled = false
         self.setupNotifications()
         if heightContraint == nil {
-            self.heightContraint = self.constraints.filter { $0.firstAttribute == NSLayoutAttribute.height}.first
+            self.heightContraint = self.constraints.filter { $0.firstAttribute == NSLayoutConstraint.Attribute.height}.first
         }
     }
     
     private func setupNotifications() {
         let nc = NotificationCenter.default
-        nc.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        nc.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        nc.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        nc.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     @objc func keyboardWillShow(notification:NSNotification) {
@@ -42,8 +42,8 @@ public class KeyboardPlaceholder: UIView {
         }
         
         guard let keyboardInfo = notification.userInfo else {return}
-        guard let keyboardFrameBeginRect = (keyboardInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {return}
-        guard let duration = keyboardInfo[UIKeyboardAnimationDurationUserInfoKey] as? Double else {return}
+        guard let keyboardFrameBeginRect = (keyboardInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {return}
+        guard let duration = keyboardInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double else {return}
         let height = keyboardFrameBeginRect.size.height - self.heightOffset
         
         set(height: height)

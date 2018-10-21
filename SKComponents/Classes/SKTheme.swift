@@ -64,11 +64,17 @@ open class SKThemeColors {
 open class SKThemeFonts {
     
     var textfieldFont = UIFont.systemFont(ofSize: 18)
+    var selectionButtonTitle = UIFont.boldSystemFont(ofSize: 18)
+    var selectionButtonValue = UIFont.systemFont(ofSize: 18)
     
 }
 
 open class SKTheme: NSObject {
+    
     public static var theme = SKTheme()
+    static var color:SKThemeColors {
+        return self.theme.color
+    }
     
     public var color = SKThemeColors()
     public var font = SKThemeFonts()

@@ -10,7 +10,11 @@ import UIKit
 public class RightArrowButton: UIButton {
 
     private let dynamicBackground = DynamicColorBackgroundView()
-    var buttonColor = SKTheme.theme.color.alizarin
+    public var buttonColor = SKTheme.theme.color.alizarin {
+        didSet {
+            updateBackgroundColor()
+        }
+    }
     
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

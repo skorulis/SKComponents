@@ -107,7 +107,7 @@ public class DynamicColorBackgroundView: UIView, CAAnimationDelegate {
         let animation = CABasicAnimation(keyPath: "path")
         animation.toValue = endPath.cgPath
         animation.duration = 0.25
-        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
+        animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeIn)
         animation.delegate = self
         circleLayer.add(animation, forKey: animation.keyPath)
     }

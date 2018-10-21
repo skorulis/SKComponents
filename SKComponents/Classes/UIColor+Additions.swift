@@ -30,6 +30,10 @@ public extension UIColor {
         return UIColor(hue: h, saturation: max(s - val, 0.0), brightness: b, alpha: a)
     }
     
+    public func darkerColor(addSaturation val: CGFloat) -> UIColor {
+        return mix(color: UIColor.black, amount: val)
+    }
+    
     public func mix(color:UIColor,amount:CGFloat) -> UIColor {
         var r1: CGFloat = 0
         var g1: CGFloat = 0
